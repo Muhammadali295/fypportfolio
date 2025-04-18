@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography, Box } from '@mui/material';
+import projectImage from '../assets/bg.jpg';
 
 const FYPDetails = ({ title, description, technologies, supervisor }) => {
   return (
@@ -8,9 +9,12 @@ const FYPDetails = ({ title, description, technologies, supervisor }) => {
         <Typography variant="h4" gutterBottom>
           Final Year Project
         </Typography>
-        <Typography variant="h5" color="primary" gutterBottom>
-          {title}
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <img src={projectImage} alt="Project" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+          <Typography variant="h5" color="primary" gutterBottom>
+            {title}
+          </Typography>
+        </Box>
         <Typography variant="body1" paragraph>
           {description}
         </Typography>
